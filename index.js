@@ -38,7 +38,7 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
   }
 });
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use("/api/auth", authRoute);
