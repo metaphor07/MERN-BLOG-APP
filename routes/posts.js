@@ -11,6 +11,7 @@ router.post("/", async (req, res) => {
       category: req.body.category,
       photo: req.body.photo,
     });
+    console.log("sv ", newPost);
     const post = await newPost.save();
     res.status(201).json(post);
   } catch (error) {
